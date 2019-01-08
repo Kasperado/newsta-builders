@@ -15,7 +15,12 @@
       </div>
       <div class="block">
         <div class="text anime left">
-          <span>We are a building company hiring over 50 professionals</span>
+          <span><h2>Our workflow</h2>
+            Within 2 weeks from the initial contact we will provide you with detailed plans of your future home and estimated cost of it.
+            You will have infinite number of revisions.
+            After the decision has been made we will build it up within 6 months.
+            At the end of each month we will deliver to you precise progress report.
+          </span>
         </div>
         <div class="img_holder anime right">
           <img src="../assets/house.jpg" alt="">
@@ -46,27 +51,25 @@ export default {
     background: linear-gradient(to bottom, #000000 0%,#b7ad63 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b7ad63',GradientType=0 ); /* IE6-9 */
 
-    h1{
-      padding: 12px;
-    }
+    h1{padding: 12px;}
 
     .block{
-      width: 80%;
+      width: 100%;
       margin: auto;
-      padding: 2vh;
-      display: flex;
+      padding: 4px;
         .img_holder{
-          width: 50%;
+          width: 100%;
           float: left;
           img{
             width: 100%;
-            padding: 3vh;
+            padding: 6px;
           }
         }
+
         .text{
+          width: 100%;
           display: flex;
           align-items: center;
-          width: 50%;
           span{
             margin: auto;
             max-width: 80%;
@@ -74,7 +77,38 @@ export default {
             background-color: rgba(0,0,0,0.3);
             border-radius: 4px;
           }
+
         }
+    }
+  }
+
+
+  @media (min-width: 730px) {
+    .about{
+      .block{
+        width: 80%;
+        padding: 2vh;
+        display: flex;
+          .img_holder{
+            width: 50%;
+            img{
+              padding: 3vh;
+            }
+          }
+
+          .text{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            span{
+              margin: auto;
+              max-width: 80%;
+              padding: 12px;
+              background-color: rgba(0,0,0,0.3);
+              border-radius: 4px;
+            }
+          }
+      }
     }
   }
 

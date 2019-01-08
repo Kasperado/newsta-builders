@@ -21,11 +21,22 @@ export default {
 <style lang="scss" scoped>
 
   .pricing{
-    width: 100%;
+
+    background-color: #AAB;
     height: 50vh;
-    background-color: gray;
+    width: 100%;
     padding: 12px;
     float: left;
+    .price_boxes{
+
+
+      .price_option{
+
+          &:hover{
+
+          }
+      }
+    }
   }
 
 </style>

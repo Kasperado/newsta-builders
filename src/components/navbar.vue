@@ -179,10 +179,10 @@ export default {
     .logo{
       a{
         p{
-      font-size: 3vh;
+          font-size: 3vh;
+        }
+      }
     }
-  }
-  }
 
     ul{
       display: block;

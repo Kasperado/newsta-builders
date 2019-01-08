@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <navbar
     logoSrc="../assets/logo.png"
     :navElements="['Home','About','Pricing','Contact']"
@@ -41,7 +40,6 @@ function fadingFun() {
     }
 }
 
-
 document.addEventListener("scroll", fadingFun, false);
 document.addEventListener('DOMContentLoaded', fadingFun, false);
 
@@ -71,6 +69,7 @@ export default {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
   }
 
   #app {
