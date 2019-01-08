@@ -1,0 +1,81 @@
+<template>
+  <section class="about">
+      <h1 class="anime blank">About us</h1>
+      <div class="block">
+        <div class="img_holder anime left">
+          <img src="../assets/plan.jpg" alt="">
+        </div>
+        <div class="text anime right">
+          <span><h2>What we do</h2>
+            We are a construction company hiring over 50 professionals.
+            Our main service is planning, desinging and building houses - all in less that 6 months!
+            We also can do renovation and pool creation.
+            Currently our service are only avaible in USA and Canada.</span>
+        </div>
+      </div>
+      <div class="block">
+        <div class="text anime left">
+          <span>We are a building company hiring over 50 professionals</span>
+        </div>
+        <div class="img_holder anime right">
+          <img src="../assets/house.jpg" alt="">
+        </div>
+      </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'aboutSection',
+  data() {
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+
+  .about{
+    width: 100%;
+    float: left;
+    color: white;
+    border-top: 3px solid black;
+    background: #000000; /* Old browsers */
+    background: -moz-linear-gradient(top, #000000 0%, #b7ad63 96%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #000000 0%,#b7ad63 96%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #000000 0%,#b7ad63 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b7ad63',GradientType=0 ); /* IE6-9 */
+
+    h1{
+      padding: 12px;
+    }
+
+    .block{
+      width: 80%;
+      margin: auto;
+      padding: 2vh;
+      display: flex;
+        .img_holder{
+          width: 50%;
+          float: left;
+          img{
+            width: 100%;
+            padding: 3vh;
+          }
+        }
+        .text{
+          display: flex;
+          align-items: center;
+          width: 50%;
+          span{
+            margin: auto;
+            max-width: 80%;
+            padding: 12px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 4px;
+          }
+        }
+    }
+  }
+
+</style>
