@@ -1,26 +1,28 @@
 # newsta-builders
 
-## Project setup
+Website of construction company created with Vue.js and ❤
+
+## Installing
+
+### Clone project
+```
+git clone https://github.com/Kasperado/newsta-builders.git
+```
+
+### Install node_modules
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Running
+
+### Development version
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Create production version (Files can be found in /dist folder)
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
