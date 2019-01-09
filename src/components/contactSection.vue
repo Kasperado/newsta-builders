@@ -6,12 +6,13 @@
         <p>Address: 129 Lafayette St New York, NY 10013</p>
         <p>Email: office@newstabuilders.com</p>
         <p>Phones:</p>
-        <p> +63 4254 3124</p>
-        <p> +63 9314 1584</p>
+        <p> +673 4254 3124</p>
+        <p> +673 9314 1584</p>
       </div>
     </div>
     <div class="info">
-      <div class="map">
+      <div class="map anime blank">
+        <googleMap></googleMap>
       </div>
     </div>
   </section>
@@ -19,7 +20,7 @@
 
 <script>
 
-//import googleMap from "./googleMap.vue";
+import googleMap from "./googleMap.vue";
 
 export default {
   name: 'contactSection',
@@ -27,7 +28,7 @@ export default {
     return {};
   },
   components: {
-  //  googleMap,
+    googleMap,
   },
 };
 </script>
@@ -49,7 +50,7 @@ export default {
     float: left;
     text-align: left;
     width: 100%;
-    height: 100%;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,8 +63,9 @@ export default {
     }
 
     .map{
-      width: 100px;
-      height: 100px;
+      width: 100%;
+      height: 200px;
+      padding: 12px;
     }
   }
 
@@ -71,6 +73,12 @@ export default {
 
       .info{
         width: 50%;
+        height: 400px;
+        .map{
+          height: 350px;
+        }
       }
+
+
     }
 </style>
