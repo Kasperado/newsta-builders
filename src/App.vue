@@ -61,6 +61,15 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
+  $selectColor: #676869;
+
+  ::selection {
+    background: $selectColor;
+  }
+  ::-moz-selection {
+    background: $selectColor;
+  }
+
   html {
     scroll-behavior: smooth;
   }
