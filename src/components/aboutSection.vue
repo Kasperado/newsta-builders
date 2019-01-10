@@ -3,14 +3,14 @@
       <h1 class="anime blank">About us</h1>
       <div class="block">
         <div class="img_holder anime left">
-          <img src="../assets/plan.jpg" alt="">
+          <img src="../assets/plan.jpg" alt="plan">
         </div>
         <div class="text anime right">
           <span><h2>What we do</h2>
             We are a construction company hiring over 50 professionals.
             Our main service is planning, desinging and building houses - all in less that 6 months!
             We also can do renovation and pool creation.
-            Currently our service are only avaible in USA and Canada.</span>
+            Currently our service are only available in USA and Canada.</span>
         </div>
       </div>
       <div class="block">
@@ -59,7 +59,6 @@ export default {
       padding: 4px;
         .img_holder{
           width: 100%;
-          float: left;
           img{
             width: 100%;
             padding: 6px;
@@ -77,7 +76,6 @@ export default {
             background-color: rgba(0,0,0,0.3);
             border-radius: 4px;
           }
-
         }
     }
   }
@@ -97,16 +95,7 @@ export default {
           }
 
           .text{
-            display: flex;
-            align-items: center;
             width: 50%;
-            span{
-              margin: auto;
-              max-width: 80%;
-              padding: 12px;
-              background-color: rgba(0,0,0,0.3);
-              border-radius: 4px;
-            }
           }
       }
     }

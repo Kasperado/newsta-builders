@@ -1,7 +1,7 @@
 <template>
   <section class="home" :style="{'height': picHeight + 'vh'}">
     <div class="intro_text">
-      <div class="main_text anime up">
+      <div class="main_text anime blank">
         {{mainText}}
       </div>
       <div class="under_text anime up">

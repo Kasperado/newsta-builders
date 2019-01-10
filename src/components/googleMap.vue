@@ -1,7 +1,7 @@
 <template>
   <GmapMap
   :center="center"
-  :zoom="14"
+  :zoom="12"
   map-type-id="terrain"
   style="width: 100%; height: 100%;"
   >

@@ -10,7 +10,7 @@
           </a>
         </div>
         <ul ref="cm">
-          <li v-for="n in navElements.reverse()" :key="n">
+          <li v-for="n in navElements" :key="n">
             <a class="list_link" v-scroll-to="{el: '.' + n.toLowerCase(), offset: -68, easing: 'ease', duration: 40 }">{{n}}</a>
           </li>
         </ul>
@@ -55,7 +55,7 @@ function scrollFun() {
 
 document.addEventListener("scroll", scrollFun, false);
 document.addEventListener('DOMContentLoaded', scrollFun, false);
-document.addEventListener('resize', scrollFun, false);
+window.addEventListener('resize', scrollFun, false);
 
 export default {
   name: 'navbar',
@@ -144,12 +144,12 @@ export default {
     position: absolute;
     top: calc(100% + 1px);
     width: 100%;
+    float: right;
     li{
       width: 100%;
-      float: right;
-      border-bottom: solid 1px #AAA;
+      float: left;
       cursor: pointer;
-
+      border-bottom: 1px solid #AAA;
       a{
         padding: 38px calc(1vw + 8px);
         display: block;
@@ -157,10 +157,7 @@ export default {
         color: $textColor;
         font-weight: bold;
         font-style: italic;
-        transition: background-color 0.5s, color 0.5s, text-shadow 0.5;
-        &:hover{
-            color: #aa5;
-        }
+
       }
     }
   }
@@ -192,7 +189,7 @@ export default {
       li{
         width: auto;
         background-color: inherit;
-        border-bottom: none;
+        border: none;
       }
     }
 }

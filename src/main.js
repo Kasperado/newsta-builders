@@ -3,9 +3,8 @@ import App from './App.vue';
 import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyCq16GJWXu0ySRPpCp3ZsslKjiuda-T8hE',
-  }
+  //Put your key here
+  load: { key: ''}
 });
 
 const VueScrollTo = require('vue-scrollto');

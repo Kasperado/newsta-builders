@@ -12,7 +12,7 @@
     </div>
     <div class="info">
       <div class="map anime blank">
-        <googleMap></googleMap>
+        <googleMap defer></googleMap>
       </div>
     </div>
   </section>
@@ -24,9 +24,6 @@ import googleMap from "./googleMap.vue";
 
 export default {
   name: 'contactSection',
-  data() {
-    return {};
-  },
   components: {
     googleMap,
   },
@@ -50,7 +47,7 @@ export default {
     float: left;
     text-align: left;
     width: 100%;
-    height: 200px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +61,7 @@ export default {
 
     .map{
       width: 100%;
-      height: 200px;
+      height: 350px;
       padding: 12px;
     }
   }
@@ -74,9 +71,6 @@ export default {
       .info{
         width: 50%;
         height: 400px;
-        .map{
-          height: 350px;
-        }
       }
 
 
