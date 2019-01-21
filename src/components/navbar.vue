@@ -25,38 +25,6 @@
 </template>
 
 <script>
-function scrollFun() {
-  if (document.body.scrollTop > 80
-    || document.documentElement.scrollTop > 80
-    || window.innerWidth < 730) {
-    document.querySelectorAll('a.list_link').forEach((e) => {
-      e.style.padding = '24px calc(1vw + 8px)';
-      e.style.color = '#444';
-      if(window.innerWidth < 730){
-        e.style.backgroundColor = '#EEE';
-      }
-    });
-    document.querySelector('.logo a img').style.width = '50px';
-    document.querySelector('.logo a p').style.color = '#444';
-    document.querySelector('nav').style.backgroundColor = '#EEE';
-    document.querySelector('nav').style.borderBottom = '1px solid #AAA';
-  } else {
-    document.querySelectorAll('a.list_link').forEach((e) => {
-      e.style.padding = '38px calc(1vw + 8px)';
-      e.style.color = '#DDD';
-      e.style.backgroundColor = 'initial';
-    });
-    document.querySelector('.logo a img').style.width = '80px';
-    document.querySelector('.logo a p').style.color = '#DDD';
-    document.querySelector('nav').style.backgroundColor = 'initial';
-    document.querySelector('nav').style.borderBottom = 'none';
-  }
-}
-
-document.addEventListener("scroll", scrollFun, false);
-document.addEventListener('DOMContentLoaded', scrollFun, false);
-window.addEventListener('resize', scrollFun, false);
-
 export default {
   name: 'navbar',
   data() {
@@ -85,7 +53,40 @@ export default {
       }
     },
 
+    scrollFun() {
+      if (document.body.scrollTop > 80
+        || document.documentElement.scrollTop > 80
+        || window.innerWidth < 730) {
+        document.querySelectorAll('a.list_link').forEach((e) => {
+          e.style.padding = '24px calc(1vw + 8px)';
+          e.style.color = '#444';
+          if(window.innerWidth < 730){
+            e.style.backgroundColor = '#EEE';
+          }
+        });
+        document.querySelector('.logo a img').style.width = '50px';
+        document.querySelector('.logo a p').style.color = '#444';
+        document.querySelector('nav').style.backgroundColor = '#EEE';
+        document.querySelector('nav').style.borderBottom = '1px solid #AAA';
+      } else {
+        document.querySelectorAll('a.list_link').forEach((e) => {
+          e.style.padding = '38px calc(1vw + 8px)';
+          e.style.color = '#DDD';
+          e.style.backgroundColor = 'initial';
+        });
+        document.querySelector('.logo a img').style.width = '80px';
+        document.querySelector('.logo a p').style.color = '#DDD';
+        document.querySelector('nav').style.backgroundColor = 'initial';
+        document.querySelector('nav').style.borderBottom = 'none';
+      }
+    }
+
   },
+  mounted() {
+    this.scrollFun();
+    document.addEventListener("scroll", this.scrollFun, false);
+    window.addEventListener('resize', this.scrollFun, false);
+  }
 };
 </script>
 

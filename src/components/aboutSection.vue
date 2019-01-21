@@ -51,8 +51,6 @@ export default {
     background: linear-gradient(to bottom, #000000 0%,#b7ad63 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#b7ad63',GradientType=0 ); /* IE6-9 */
 
-    h1{padding: 12px;}
-
     .block{
       width: 100%;
       margin: auto;
@@ -67,9 +65,11 @@ export default {
 
         .text{
           width: 100%;
+          font-size: 18px;
           display: flex;
           align-items: center;
           span{
+            font-size: 16px;
             margin: auto;
             max-width: 80%;
             padding: 12px;
@@ -95,7 +95,11 @@ export default {
           }
 
           .text{
+            font-size: 24px;
             width: 50%;
+            span{
+              font-size: 22px;
+            }
           }
       }
     }

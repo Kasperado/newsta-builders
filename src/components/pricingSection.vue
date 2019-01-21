@@ -32,9 +32,6 @@
 <script>
 export default {
   name: 'pricingSection',
-  data() {
-    return {};
-  },
 };
 </script>
 
@@ -58,8 +55,8 @@ export default {
       .price_option{
           margin: auto;
           margin-bottom: 12px;
+          height: auto;
           width: 100%;
-          max-width: 300px;
           background-color: #c7bd73;
           border-radius: 5px;
 
@@ -73,19 +70,19 @@ export default {
           .name{
             font-size: 18px;
             font-weight: bold;
-            height: 10%;
+            height: 15%;
             background-color: $egdeColor;
             border-radius: 5px 5px 0 0;
           }
 
           .desc{
-            height: 80%;
+            height: 70%;
             width: 180px;
             margin: auto;
           }
 
           .cost{
-            height: 10%;
+            height: 15%;
             background-color: $egdeColor;
             border-radius: 0 0 5px 5px;
           }
@@ -97,18 +94,28 @@ export default {
 
       .pricing{
         .price_boxes{
-          max-width: 1000px;
+          max-width: 1200px;
           padding: 12px;
           display: flex;
           align-items: center;
+          justify-content: center;
           .price_option{
+            border-radius: 5px;
+            transition: all 0.5s;
             height: 300px;
-              width: 250px;
-              border-radius: 5px;
-              transition: box-shadow 0.5s;
-              &:hover{
-                box-shadow: 0 0 20px 1px;
-              }
+            width: 300px;
+            .name{
+              font-size: 24px;
+              padding: 4px;
+            }
+            .desc{
+              font-size: 20px;
+              width: 80%;
+            }
+
+            .cost{
+                font-size: 20px;
+            }
           }
         }
       }
