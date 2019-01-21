@@ -11,7 +11,7 @@
         </div>
         <ul ref="cm">
           <li v-for="n in navElements" :key="n">
-            <a class="list_link" v-scroll-to="{el: '.' + n.toLowerCase(), offset: -68, easing: 'ease', duration: 40 }">{{n}}</a>
+            <a class="list_link" @click="toggleMenu" v-scroll-to="{el: '.' + n.toLowerCase(), offset: -68, easing: 'ease', duration: 40 }">{{n}}</a>
           </li>
         </ul>
         <div @click="toggleMenu" class="mobile_menu">

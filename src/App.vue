@@ -25,24 +25,6 @@ import aboutSection from './components/aboutSection.vue';
 import pricingSection from './components/pricingSection.vue';
 import contactSection from './components/contactSection.vue';
 
-
-function fadingFun() {
-  const elements = document.querySelectorAll('.anime');
-  const windowHeight = window.innerHeight;
-    for (var i = 0; i < elements.length; i++) {
-      // Check for every element if at least 50% of it's height is shown on screen >> if so, animate
-      let positionFromTop = elements[i].getBoundingClientRect().top + (elements[i].offsetHeight/2);
-      if (positionFromTop - windowHeight <= 0) {
-        elements[i].className = elements[i].className.replace('anime',''); // Remove opacity 0
-        let type = elements[i].className.match(/(left|right|up|blank)/g).toString(); // Get type of animation
-        elements[i].className = elements[i].className.replace(type,'fadeIn'+type.charAt(0).toUpperCase() + type.slice(1)); // Switch class
-      }
-    }
-}
-
-document.addEventListener("scroll", fadingFun, false);
-document.addEventListener('DOMContentLoaded', fadingFun, false);
-
 export default {
   name: 'app',
   data() {
@@ -55,6 +37,26 @@ export default {
     pricingSection,
     contactSection,
   },
+  methods: {
+    fadingFun() {
+      const elements = document.querySelectorAll('.anime');
+      const windowHeight = window.innerHeight;
+        for (var i = 0; i < elements.length; i++) {
+          // Check for every element if at least 50% of it's height is shown on screen >> if so, animate
+          let positionFromTop = elements[i].getBoundingClientRect().top + (elements[i].offsetHeight/2);
+          if (positionFromTop - windowHeight <= 0) {
+            elements[i].className = elements[i].className.replace('anime',''); // Remove opacity 0
+            let type = elements[i].className.match(/(left|right|up|blank)/g).toString(); // Get type of animation
+            elements[i].className = elements[i].className.replace(type,'fadeIn'+type.charAt(0).toUpperCase() + type.slice(1)); // Switch class
+          }
+        }
+    }
+  },
+  mounted () {
+    document.addEventListener("scroll", this.fadingFun, false);
+    this.fadingFun();
+  }
+
 };
 </script>
 
