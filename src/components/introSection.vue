@@ -1,14 +1,14 @@
 <template>
-  <section class="home" :style="{'height': picHeight + 'vh'}">
-    <div class="intro_text">
-      <div class="main_text anime blank">
-        {{mainText}}
-      </div>
-      <div class="under_text anime up">
-        {{underText}}
-      </div>
+<section class="home" :style="{'height': picHeight + 'vh'}">
+  <div class="intro_text">
+    <div class="main_text anime blank">
+      {{mainText}}
     </div>
-  </section>
+    <div class="under_text anime up">
+      {{underText}}
+    </div>
+  </div>
+</section>
 </template>
 
 <script>
@@ -35,34 +35,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-  .home{
-    float: left;
+.home {
     background-image: url("../assets/intro.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-  }
+}
 
-  .intro_text{
+.intro_text {
     float: none;
     max-width: 80%;
     margin: auto;
     padding-top: 30vh;
-  }
+}
 
-  .main_text, .under_text{
+.main_text,
+.under_text {
     text-shadow: 2px 2px 2px black;
     color: white;
     font-weight: bold;
     font-style: italic;
     font-size: 4vh;
-  }
+}
 
-  .main_text{
+.main_text {
     font-size: 7vh;
-  }
-
+}
 </style>
