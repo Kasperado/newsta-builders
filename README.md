@@ -1,6 +1,6 @@
 # newsta-builders
 
-Website of construction company created with Vue.js and ❤
+Website of construction company created with Vue.js
 
 ## Installing
 
